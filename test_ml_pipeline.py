@@ -53,7 +53,8 @@ class TestMLPipeline(unittest.TestCase):
 
         prediction = model.predict(sample)[0]
 
-        self.assertEqual(int(prediction), 1)
+        # Intentionally incorrect expected result
+        self.assertEqual(int(prediction), 0)
 
     def test_low_performance_student(self):
         model = joblib.load("student_result_model.pkl")
